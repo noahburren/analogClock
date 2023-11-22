@@ -1,21 +1,21 @@
 // Klassen
 // Funktionalitäten
-const clock = document.querySelector('.outer-clock-face');
-const hr = document.querySelector('.hand.hour-hand');
-const min = document.querySelector('.hand.min-hand');
-const sec = document.querySelector('.hand.second-hand');
+const clock = document.querySelector(".outer-clock-face");
+const hr = document.querySelector(".hand.hour-hand");
+const min = document.querySelector(".hand.min-hand");
+const sec = document.querySelector(".hand.second-hand");
 
 // Funktion zum Berechnen der Rotation basierend auf der Uhrzeit
 function setClockHands(time) {
   const { hours, minutes, seconds } = time;
-  const hrrotation = (30 * hours) + (0.5 * minutes);
+  const hrrotation = 30 * hours + 0.5 * minutes;
   const minrotation = 6 * minutes;
   const secrotation = 6 * seconds;
 
   // Füge die Transition-Eigenschaft hinzu
-  hr.style.transition = 'transform 1s ease';
-  min.style.transition = 'transform 1s ease';
-  sec.style.transition = 'transform 1s ease';
+  hr.style.transition = "transform 1s ease";
+  min.style.transition = "transform 1s ease";
+  sec.style.transition = "transform 1s ease";
 
   hr.style.transform = `translate(-50%,-100%) rotate(${hrrotation}deg)`;
   min.style.transform = `translate(-50%,-100%) rotate(${minrotation}deg)`;
@@ -24,7 +24,10 @@ function setClockHands(time) {
 
 // Funktion zum Formatieren der Uhrzeit
 function formatTime(hours, minutes, seconds) {
-  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(
+    2,
+    "0"
+  )}:${String(seconds).padStart(2, "0")}`;
 }
 
 // Standardzeit setzen (aktuelle Zeit)
@@ -37,7 +40,7 @@ setClockHands({ hours, minutes, seconds });
 // Mouseover Event für die Uhr
 let intervalId;
 
-clock.addEventListener('mouseover', () => {
+clock.addEventListener("mouseover", () => {
   // Uhrzeiger auf 14:50 Uhr setzen
   setClockHands({ hours: 14, minutes: 50, seconds: 0 });
 
@@ -49,11 +52,11 @@ clock.addEventListener('mouseover', () => {
 });
 
 // Mouseout Event für die Uhr (optional)
-clock.addEventListener('mouseout', () => {
+clock.addEventListener("mouseout", () => {
   // Entferne die Transition-Eigenschaft
-  hr.style.transition = '';
-  min.style.transition = '';
-  sec.style.transition = '';
+  hr.style.transition = "";
+  min.style.transition = "";
+  sec.style.transition = "";
 
   // Neues Intervall für aktuelle Uhrzeit starten
   intervalId = setInterval(() => {
