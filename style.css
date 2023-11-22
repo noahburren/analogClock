@@ -55,43 +55,6 @@
 .outer-clock-face:hover {
   width: 450px;
   height: 450px;
-  box-shadow: 0 0 300px rgba(40, 255, 7, 0.5);
+  box-shadow: 0 0 300px rgba(40, 255, 7, 0.724);
   transition: 2s;
-}
-
-/* Responsive design */
-@media screen and (max-width: 600px) {
-  .hand {
-    width: 2%;
-  }
-
-  .hand.hour-hand {
-    height: 20%;
-  }
-
-  .hand.min-hand {
-    height: 25%;
-  }
-
-  .hand.second-hand {
-    height: 35%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .hand {
-    width: 3%;
-  }
-
-  .hand.hour-hand {
-    height: 15%;
-  }
-
-  .hand.min-hand {
-    height: 20%;
-  }
-
-  .hand.second-hand {
-    height: 30%;
-  }
 }
