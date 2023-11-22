@@ -11,6 +11,7 @@
   background: url("uhr.jpg") no-repeat center;
   background-size: cover; /* Sorgt dafür, dass das Bild den gesamten Bereich bedeckt */
   box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.3);
+  transition: ease 2s;
 }
 
 .hand.hour-hand,
@@ -48,6 +49,14 @@
   background-color: #ff0000;
   transform-origin: 50% 85%;
   z-index: 3;
+}
+
+/*Hover effekt*/
+.outer-clock-face:hover {
+  width: 450px;
+  height: 450px;
+  box-shadow: 0 0 300px rgba(40, 255, 7, 0.5);
+  transition: 2s;
 }
 
 /* Responsive design */
