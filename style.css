@@ -1,0 +1,14 @@
+.outer-clock-face {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #fff; /* Hintergrundfarbe des Ziffernblatts */
+  border-radius: 50%; /* Runde Form für das Ziffernblatt */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); /* Zentriert das Ziffernblatt */
+  /* Änderung im Hintergrundbild */
+  background: url("uhr.jpg") no-repeat center;
+  background-size: cover; /* Sorgt dafür, dass das Bild den gesamten Bereich bedeckt */
+  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.3);
+}
