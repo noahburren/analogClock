@@ -63,7 +63,7 @@
 .outer-clock-face:hover {
   width: 90vw; /* Adjust size on hover */
   height: 90vw; /* Adjust size on hover */
-  box-shadow: 2.5em 7vw 10.8vw rgba(40, 255, 7, 1); /* Change box-shadow on hover */
+  box-shadow: 2.5em 7vw 10.8vw rgba(40, 255, 7, 1);
   transition: 1s; /* Set transition for hover effect */
   scale: 1.1; /* Scale effect on hover */
 }
