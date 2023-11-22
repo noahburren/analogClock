@@ -12,3 +12,41 @@
   background-size: cover; /* Sorgt dafür, dass das Bild den gesamten Bereich bedeckt */
   box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.3);
 }
+
+.hand.hour-hand,
+.hand.min-hand,
+.hand.second-hand {
+  width: 7%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+  z-index: 2;
+  border-radius: 2em;
+  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Different length of different hands of clock */
+.hand.hour-hand {
+  height: 25%;
+  background-color: #000000;
+  z-index: 1;
+  border-radius: 100% 80%;
+}
+
+.hand.min-hand {
+  height: 35%;
+  background-color: #000000;
+  z-index: 2;
+  border-color: aqua;
+  border-radius: 100% 80%;
+}
+
+.hand.second-hand {
+  height: 50%;
+  width: 3%;
+  background-color: #ff0000;
+  transform-origin: 50% 85%;
+  z-index: 3;
+}
