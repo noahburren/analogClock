@@ -1,19 +1,22 @@
+/* Styles for the clock container */
 .outer-clock-face {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background-color: #fff; /* Hintergrundfarbe des Ziffernblatts */
-  border-radius: 50%; /* Runde Form für das Ziffernblatt */
+  position: absolute;
+  width: 80vw; /* Set the initial width to 80% of viewport width */
+  height: 80vw; /* Maintain a square aspect ratio */
+  max-width: 400px; /* Set a maximum width */
+  max-height: 400px; /* Set a maximum height */
+  background-color: #fff;
+  border-radius: 50%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%); /* Zentriert das Ziffernblatt */
-  /* Änderung im Hintergrundbild */
+  transform: translate(-50%, -50%);
   background: url("uhr.jpg") no-repeat center;
-  background-size: cover; /* Sorgt dafür, dass das Bild den gesamten Bereich bedeckt */
-  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.3);
-  transition: ease 2s;
+  background-size: cover;
+  box-shadow: 2.5em 7vw 10.8vw; /* Set box-shadow */
+  transition: ease 1s; /* Set transition for hover effect */
 }
 
+/* Styles for clock hands */
 .hand.hour-hand,
 .hand.min-hand,
 .hand.second-hand {
@@ -28,33 +31,61 @@
   box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Unterschiedliche längen für die Zeiger */
+/* Styles for hour hand */
 .hand.hour-hand {
   height: 25%;
-  background-color: #000000;
+  background-color: rgba(245, 139, 255, 0.3);
   z-index: 1;
   border-radius: 100% 80%;
+  border: 0.29vw solid black;
 }
 
+/* Styles for minute hand */
 .hand.min-hand {
   height: 35%;
-  background-color: #000000;
-  z-index: 2;
+  background-color: rgba(245, 139, 255, 0.3);
+  z-index: 3;
   border-radius: 100% 80%;
+  border: 0.29vw solid black;
 }
 
+/* Styles for second hand */
 .hand.second-hand {
   height: 50%;
   width: 3%;
-  background-color: #ff0000;
+  background-color: #00d0ff;
+  border: 0.29vw solid black;
   transform-origin: 50% 85%;
-  z-index: 3;
+  z-index: 2;
 }
 
-/*Hover effekt*/
+/* Hover effect for the clock container */
 .outer-clock-face:hover {
-  width: 450px;
-  height: 450px;
-  box-shadow: 0 0 300px rgba(40, 255, 7, 0.724);
-  transition: 2s;
+  width: 90vw; /* Adjust size on hover */
+  height: 90vw; /* Adjust size on hover */
+  box-shadow: 2.5em 7vw 10.8vw rgba(40, 255, 7, 1); /* Change box-shadow on hover */
+  transition: 1s; /* Set transition for hover effect */
+  scale: 1.1; /* Scale effect on hover */
+}
+
+/* Body styles */
+body {
+  background-image: linear-gradient(
+    70deg,
+    rgb(178, 102, 255),
+    rgb(153, 152, 255)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .outer-clock-face {
+    width: 90vw;
+    height: 90vw;
+    max-width: none;
+    max-height: none;
+  }
 }
